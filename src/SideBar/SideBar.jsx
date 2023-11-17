@@ -6,7 +6,7 @@ import Purchase from "../Purchase/Purchase";
 const SideBar = ({ isOpen, toggleOpen, purchases, handleRemove, incrementQuantity, decrementQuantity}) => {
     
     return (
-        <section style={{
+        <section className="sideBar" style={{
             position: 'absolute',
             overflow: 'auto',
             zIndex: 10,
@@ -21,11 +21,11 @@ const SideBar = ({ isOpen, toggleOpen, purchases, handleRemove, incrementQuantit
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'end'}}>
         <button onClick={toggleOpen} style={{position: 'relative',display: 'block', padding: '10px 16px', borderRadius: '4px', transition: 'all 0.2s ease-in-out', backgroundColor: isOpen ? 'rgba(85, 168, 33, 0.8)' : 'rgba(85, 168, 33, 0.8)', color:'white', border: '1px solid white'}}>
           {isOpen ? <FontAwesomeIcon icon={faArrowLeft} /> : <FontAwesomeIcon icon={faBasketShopping} />}
-          {!isOpen && <p style={{position: 'absolute',border: '1px solid black', height: '0.8rem', width:'0.8rem', borderRadius: '1rem', backgroundColor: 'red', top: '0.1rem', right: '0.1rem', fontSize: '0.7rem'}}>{Object.keys(purchases).length}</p>}
+          {!isOpen && <p style={{position: 'absolute',border: '1px solid red', height: '0.8rem', width:'0.8rem', borderRadius: '1rem', backgroundColor: 'red', top: '0.1rem', right: '0.1rem', fontSize: '0.7rem'}}>{Object.keys(purchases).length}</p>}
         </button>
         </div>
             {isOpen && ( // Ajoutez ceci
-                <section style={{padding: '0.5rem', display: 'flex', flexDirection: 'column', gap:'1rem'}}>
+                <section  style={{padding: '0.5rem', display: 'flex', flexDirection: 'column', gap:'1rem'}}>
                     <h2 style={{fontSize: '1.5rem',fontFamily: 'mountain'}}>Panier</h2>
                     <div style={{fontFamily: 'mountain', display: 'flex', flexDirection: 'column', gap:'1rem',overflow: 'auto', height: '60vh', padding: '1rem 0.5rem',flexGrow: '1'}}>
                         {/* {purchases.map((purchase) => ( */}

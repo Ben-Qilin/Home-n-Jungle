@@ -13,7 +13,7 @@ const Card = ({img, water, sun, id, price, name, addToPurchase, product}) => {
                 <p style={{textAlign: 'start'}}>{water}</p>
                 <p style={{textAlign: 'start'}}>{sun}</p>
             </div>
-            <button onClick={() => addToPurchase({ ...product })} style={{fontSize: '1.2rem', fontFamily: 'mountain',color: 'white',width: '50%', border: 'none', border: '1px solid gray', borderRadius: '1rem', padding: '0.2rem 0.5rem', backgroundColor: 'rgba(85, 168, 33, 0.8)'}}>Ajouter <FontAwesomeIcon icon={faCartShopping} style={{color: 'white'}}/></button>
+            <button onClick={() => addToPurchase({ ...product })} style={{fontSize: '1.2rem', fontFamily: 'mountain',color: 'white',width: '50%', border: '1px solid gray', borderRadius: '1rem', padding: '0.2rem 0.5rem', backgroundColor: 'rgba(85, 168, 33, 0.8)'}}>Ajouter <FontAwesomeIcon icon={faCartShopping} style={{color: 'white'}}/></button>
         </article>
         )
         

@@ -18,7 +18,7 @@ const Filters = ({ setFilteredProducts }) => {
 
     }, [selectFilter, waterFilter, sunFilter, setFilteredProducts])
     return (
-        <section style={{ height: '5vh', width: '80%', backgroundColor: 'rgba(85, 168, 33, 0.8)', display: 'flex', justifyContent: 'center', gap: '1rem', alignItems: 'center', borderRadius: '0.5rem' }}>
+        <section style={{boxShadow: 'rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px', height: '5vh', width: '80%', backgroundColor: 'rgba(85, 168, 33, 0.8)', display: 'flex', justifyContent: 'center', gap: '1rem', alignItems: 'center', borderRadius: '0.5rem' }}>
             <select style={{ padding: '0.2rem', height: '80%', borderRadius: '0.5rem' }} onChange={e => setSelectFilter(e.target.value)}>
                 <option value='all'>Tous les produits</option>
                 <option value="grasse">Plante grasse</option>
